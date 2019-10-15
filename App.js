@@ -111,8 +111,18 @@ const AppNavigator = createStackNavigator( {
   SignUp : SignUp,
   Login : LoginForm,
 },
+{headerLayoutPreset: 'center'},
 {
   initialRouteName: 'Home',
+  navigationOptions: ({navigation}) => ({
+    
+  header: <AppBar title={navigation.getParam('appBar', {title: ''}).title}/>,
+   // headerTitleStyle: { flex: 1, textAlign: 'center'},
+    
+}),
+cardStyle: {
+    backgroundColor: 'white'
+}
 }
 );
 

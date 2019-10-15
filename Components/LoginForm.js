@@ -30,8 +30,25 @@ import {
   TextInput,
   StyleSheet
 } from 'react-native'
+import { Header } from 'react-native/Libraries/NewAppScreen'
+import { HeaderTitle } from 'react-navigation-stack'
 
 export default class LoginForm extends React.Component {
+  static navigationOptions = {
+    title: 'Login',
+    headerStyle: {
+      backgroundColor: 'blue',
+    },
+    headerTintColor: '',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      textAlign: 'right'
+      
+    },
+    
+  };
+
+
   state = {
     username: '', password: ''
   }
@@ -66,6 +83,11 @@ export default class LoginForm extends React.Component {
           placeholderTextColor='white'
           onChangeText={val => this.onChangeText('password', val)}
         />
+        
+
+
+        
+        
         
         <Button
           title='SignIn'

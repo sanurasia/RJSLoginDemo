@@ -8,6 +8,19 @@ import {
 } from 'react-native'
 
 export default class SignUp extends React.Component {
+  static navigationOptions = {
+    title: 'SignUp',
+    headerStyle: {
+      backgroundColor: 'blue',
+    },
+    headerTintColor: '',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      textAlign: 'right'
+      
+    },
+    
+  };
   state = {
     username: '', password: '', email: '', phone_number: ''
   }
